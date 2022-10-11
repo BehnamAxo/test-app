@@ -1,12 +1,18 @@
-function App() {
+import Header from "./components/Header";
 
-  const name = 'Behnam';
-
-  return (
-    <div className="container">
-      <h1>Hello From ReactJs from {name}</h1>
-    </div>
-  );
-}
+const App = () => (
+  <div className="container">
+    <Header />
+  </div>
+);
 
 export default App;
+
+
+// import React  from "react";
+
+// class App extends React.Component {
+//   render() {
+//     return <h1>Test with a class</h1>
+//   }
+// }
