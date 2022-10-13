@@ -30,21 +30,18 @@ const App = () => {
       }
   ]);
 
+
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  }
+
+
   return (
     <div className="container">
       <Header />
-      <Tasks tasks={tasks}/>
+      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} /> : 'There is no tasks left!'}
     </div>
   );
 }
 
 export default App;
-
-
-// import React  from "react";
-
-// class App extends React.Component {
-//   render() {
-//     return <h1>Test with a class</h1>
-//   }
-// }
