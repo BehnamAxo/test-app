@@ -79,36 +79,34 @@ const App = () => {
       <div>
       <Navbar/>
       <Sun/>
-      
-      <div className='container'>
-        
-        <Moon/>
-        <Header
-          onAdd={() => setShowAddTask(!showAddTask)}
-          showAdd={showAddTask}
-        />
-        <Routes>
-          <Route
-            path='/'
-            element={
-              <>
-                {showAddTask && <AddTask onAdd={addTask} />}
-                {tasks.length > 0 ? (
-                  <Tasks
-                    tasks={tasks}
-                    onDelete={deleteTask}
-                    onToggle={toggleReminder}
-                  />
-                ) : (
-                  'There is no tasks left!'
-                )}
-              </>
-            }
+        <div className='container'>
+          <Moon/>
+          <Header
+            onAdd={() => setShowAddTask(!showAddTask)}
+            showAdd={showAddTask}
           />
-          <Route path='/about' element={<About />} />
-        </Routes>
-        <Footer />
-      </div>
+          <Routes>
+            <Route
+              path='/'
+              element={
+                <>
+                  {showAddTask && <AddTask onAdd={addTask} />}
+                  {tasks.length > 0 ? (
+                    <Tasks
+                      tasks={tasks}
+                      onDelete={deleteTask}
+                      onToggle={toggleReminder}
+                    />
+                  ) : (
+                    'There is no tasks left!'
+                  )}
+                </>
+              }
+            />
+            <Route path='/about' element={<About />} />
+          </Routes>
+          <Footer />
+        </div>
       </div>
     </Router>
   )

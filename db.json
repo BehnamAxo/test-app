@@ -19,9 +19,9 @@
       "reminder": true
     },
     {
-      "text": "lll",
-      "day": "lll;jhgj",
-      "reminder": true,
+      "text": "Gym time",
+      "day": "Feb 13th 6:00 a.m.",
+      "reminder": false,
       "id": 4
     }
   ]
